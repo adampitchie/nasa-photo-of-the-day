@@ -3,11 +3,7 @@ import axios from 'axios'
 import styled from 'styled-components'
 
 const StyledH1 = styled.h1`
-  color: 'blue';
-`;
-
-const StyledDiv = styled.div`
-  color: 'blue';
+  color: blue;
 `;
 
 export default function Photo() {
@@ -24,9 +20,9 @@ export default function Photo() {
   }, [])
 
   return (
-    <StyledDiv>
+    <div>
       <StyledH1>Photo of the Day</StyledH1>
       <img src={photo} />
-    </StyledDiv>
+    </div>
   )
 }
