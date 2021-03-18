@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import styled from 'styled-components'
+
+const StyledH1 = styled.h1`
+  color: 'blue';
+`;
+
+const StyledDiv = styled.div`
+  color: 'blue';
+`;
 
 export default function Photo() {
   const [photo, setPhoto] = useState('')
@@ -15,8 +24,9 @@ export default function Photo() {
   }, [])
 
   return (
-    <div>
-      <img src={photo}></img>
-    </div>
+    <StyledDiv>
+      <StyledH1>Photo of the Day</StyledH1>
+      <img src={photo} />
+    </StyledDiv>
   )
 }
